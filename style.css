@@ -1,0 +1,534 @@
+
+:root {
+  --blue: #75bd83;
+  --blue-dark: #242724;
+  --sky: #c8d0ca;
+  --gold: #75bd83;
+  --cream: #303431;
+  --text: #dedfdd;
+  --muted: #aeb5af;
+  --white: #292c29;
+  --border: #454a45;
+  --shadow: 0 12px 30px rgba(0, 0, 0, 0.25);
+  --radius: 18px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--text);
+  background: #292c29;
+  font-family: "Segoe UI", Arial, sans-serif;
+  line-height: 1.7;
+}
+
+body.dark-mode {
+  --text: #e3e5e2;
+  --muted: #b1b7b1;
+  --white: #202320;
+  --cream: #292d29;
+  --border: #3e443e;
+  --shadow: 0 12px 30px rgba(0, 0, 0, 0.35);
+  background: #202320;
+}
+
+h1, h2, h3, h4 {
+  font-weight: 750;
+  line-height: 1.2;
+}
+
+a {
+  color: var(--blue);
+}
+
+.dark-mode a {
+  color: #91d59c;
+}
+
+/* Navbar */
+.site-nav {
+  background: rgba(36, 39, 36, 0.97);
+  border-bottom: 1px solid var(--border);
+  backdrop-filter: blur(12px);
+}
+
+.dark-mode .site-nav {
+  background: rgba(32, 35, 32, 0.97);
+}
+
+.navbar-brand {
+  color: #dfe3de;
+}
+
+.dark-mode .navbar-brand,
+.dark-mode .nav-link {
+  color: #e3e5e2;
+}
+
+.nav-link {
+  font-weight: 600;
+  color: #c6cbc5;
+  transition: 0.2s ease;
+}
+
+.nav-link:hover,
+.nav-link.active {
+  color: #91d59c;
+}
+
+.theme-btn {
+  border: 1px solid var(--border);
+  background: #383c38;
+  color: var(--text);
+}
+
+/* Hero */
+.hero-section {
+  min-height: 78vh;
+  display: flex;
+  align-items: center;
+  background:
+    linear-gradient(90deg, rgba(24, 27, 24, 0.90), rgba(35, 39, 35, 0.40)),
+    url("https://upload.wikimedia.org/wikipedia/commons/8/8d/Maletsunyanefalls.JPG") center/cover;
+  color: #f2f3f0;
+}
+
+.min-vh-75 {
+  min-height: 78vh;
+}
+
+.hero-section h1 {
+  max-width: 850px;
+  font-size: clamp(2.7rem, 7vw, 5.8rem);
+  letter-spacing: -0.04em;
+}
+
+.hero-section p {
+  max-width: 680px;
+  color: rgba(242, 243, 240, 0.90);
+}
+
+.eyebrow {
+  display: inline-block;
+  margin-bottom: 0.7rem;
+  color: #f0f2ed;
+  font-size: .78rem;
+  font-weight: 800;
+  letter-spacing: .15em;
+}
+
+.eyebrow.dark {
+  color: #91d59c;
+}
+
+/* Common sections */
+.section-space {
+  padding: 5.5rem 0;
+}
+
+.section-soft {
+  background: #303431;
+}
+
+.section-heading {
+  max-width: 760px;
+}
+
+.section-heading.text-center {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.section-heading p {
+  color: var(--muted);
+}
+
+/* Cards */
+.feature-card,
+.destination-card,
+.activity-card,
+.form-card,
+.info-box {
+  background: #303431;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  color: var(--text);
+}
+
+.feature-card {
+  padding: 2rem;
+  transition: transform .2s ease, box-shadow .2s ease;
+}
+
+.feature-card:hover,
+.destination-card:hover,
+.activity-card:hover {
+  transform: translateY(-5px);
+}
+
+.feature-icon {
+  font-size: 2.3rem;
+  margin-bottom: 1rem;
+  color: #91d59c;
+}
+
+.destination-card {
+  position: relative;
+  overflow: hidden;
+  transition: transform .2s ease;
+}
+
+.destination-card img {
+  height: 230px;
+  object-fit: cover;
+}
+
+.destination-card .card-body {
+  padding: 1.5rem;
+  background: #303431;
+  color: var(--text);
+}
+
+.destination-card h3 {
+  font-size: 1.35rem;
+  color: #dfe3de;
+}
+
+.activity-card {
+  padding: 1.6rem;
+  height: 100%;
+  transition: transform .2s ease;
+}
+
+.activity-card span {
+  font-size: 2rem;
+  color: #91d59c;
+}
+
+.activity-card h3 {
+  margin-top: .7rem;
+  color: #dfe3de;
+}
+
+/* Carousel */
+.carousel-image {
+  height: 520px;
+  object-fit: cover;
+  filter: brightness(.70);
+}
+
+.carousel-caption {
+  background: rgba(30, 33, 30, .82);
+  border-radius: 14px;
+  padding: 1rem;
+  color: #f2f3f0;
+}
+
+/* Call to action */
+.cta-box {
+  padding: 2.2rem;
+  border-radius: var(--radius);
+  background: linear-gradient(135deg, #303431, #42684a);
+  color: #f2f3f0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 2rem;
+}
+
+.cta-box .btn {
+  background: #75a980;
+  border-color: #75a980;
+  color: #202520;
+}
+
+/* Internal page heading */
+.page-banner {
+  padding: 6rem 0;
+  color: #f2f3f0;
+  background:
+    linear-gradient(90deg, rgba(24, 27, 24, .90), rgba(35, 39, 35, .62)),
+    url("https://upload.wikimedia.org/wikipedia/commons/4/47/Katse_Dam.jpg") center/cover;
+}
+
+.page-banner h1 {
+  font-size: clamp(2.5rem, 6vw, 4.8rem);
+}
+
+/* About list */
+.check-list {
+  padding-left: 1.3rem;
+}
+
+.check-list li {
+  margin-bottom: .6rem;
+}
+
+.check-list li::marker {
+  color: #91d59c;
+}
+
+/* Search panel */
+.search-panel {
+  background: #303431;
+  border: 1px solid var(--border);
+  color: var(--text);
+}
+
+.form-control,
+.form-select {
+  border-radius: 10px;
+  border-color: var(--border);
+  padding: .75rem .9rem;
+  background-color: #242724;
+  color: var(--text);
+}
+
+.form-control::placeholder {
+  color: #aeb5af;
+}
+
+.form-select option {
+  background: #242724;
+  color: #dedfdd;
+}
+
+.form-control:focus,
+.form-select:focus {
+  border-color: #75a980;
+  background-color: #242724;
+  color: #dedfdd;
+  box-shadow: 0 0 0 .2rem rgba(117, 169, 128, .20);
+}
+
+/* Gallery */
+.gallery-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+
+.gallery-item {
+  position: relative;
+  border: 0;
+  padding: 0;
+  border-radius: 16px;
+  overflow: hidden;
+  cursor: pointer;
+  background: #202320;
+  min-height: 250px;
+}
+
+.gallery-item img {
+  width: 100%;
+  height: 100%;
+  min-height: 250px;
+  object-fit: cover;
+  display: block;
+  transition: transform .35s ease;
+}
+
+.gallery-item:hover img {
+  transform: scale(1.06);
+}
+
+.gallery-item span {
+  position: absolute;
+  left: 1rem;
+  bottom: 1rem;
+  color: #f2f3f0;
+  font-weight: 700;
+  background: rgba(30, 33, 30, .86);
+  padding: .4rem .7rem;
+  border-radius: 8px;
+}
+
+/* Gallery image popup */
+.gallery-modal-content {
+  background: #303431;
+  color: var(--text);
+  border-color: var(--border);
+}
+
+/* Forms */
+.form-card {
+  padding: 2rem;
+}
+
+.calculator-result {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1.2rem;
+  border-radius: 14px;
+  background: #303431;
+  border: 1px solid var(--border);
+}
+
+.calculator-result strong {
+  color: #91d59c;
+  font-size: 1.6rem;
+}
+
+.info-box {
+  padding: 2rem;
+  text-align: center;
+}
+
+.info-box span {
+  font-size: 2rem;
+  color: #91d59c;
+}
+
+/* Footer */
+.site-footer {
+  background: #202320;
+  color: #d5d9d3;
+  border-top: 1px solid #454a45;
+}
+
+.site-footer a {
+  color: #c8d0c8;
+}
+
+.site-footer a:hover {
+  color: #91d59c;
+}
+
+/* Bootstrap button customisation */
+.btn-primary {
+  background: #42684a;
+  border-color: #42684a;
+  color: #f2f3f0;
+}
+
+.btn-primary:hover {
+  background: #344f39;
+  border-color: #344f39;
+  color: #ffffff;
+  transform: translateY(-1px);
+}
+
+.btn-outline-primary {
+  color: #b8d9bd;
+  border-color: #75a980;
+}
+
+.btn-outline-primary:hover {
+  background: #42684a;
+  border-color: #42684a;
+  color: #ffffff;
+}
+
+.btn-success {
+  background: #42684a;
+  border-color: #42684a;
+  color: #f2f3f0;
+}
+
+.btn-success:hover {
+  background: #344f39;
+  border-color: #344f39;
+  color: #ffffff;
+}
+
+.btn {
+  border-radius: 10px;
+  font-weight: 700;
+  transition: .2s ease;
+}
+
+/* Mobile/tablet responsive CSS.
+   Bootstrap also handles responsive columns, but I add my own
+   rules here to show that I understand CSS media queries. */
+@media (max-width: 991.98px) {
+  .section-space {
+    padding: 4rem 0;
+  }
+
+  .hero-section {
+    min-height: 70vh;
+  }
+
+  .min-vh-75 {
+    min-height: 70vh;
+  }
+
+  .cta-box {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .gallery-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 575.98px) {
+  .hero-section {
+    min-height: 78vh;
+  }
+
+  .hero-section h1 {
+    font-size: 2.7rem;
+  }
+
+  .carousel-image {
+    height: 380px;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .page-banner {
+    padding: 4rem 0;
+  }
+
+  .form-card,
+  .feature-card {
+    padding: 1.4rem;
+  }
+}
+
+/* When the user selects dark mode, a few Bootstrap-looking areas
+   need a small adjustment so the text stays readable. */
+.dark-mode .accordion-item,
+.dark-mode .accordion-button,
+.dark-mode .accordion-body {
+  background: #292c29;
+  color: var(--text);
+  border-color: var(--border);
+}
+
+.dark-mode .accordion-button:not(.collapsed) {
+  background: #303431;
+  color: #91d59c;
+}
+
+.dark-mode .text-muted,
+.dark-mode .form-text {
+  color: var(--muted) !important;
+}
+
+.dark-mode .card,
+.dark-mode .modal-content {
+  background: #303431;
+  color: var(--text);
+  border-color: var(--border);
+}
+
+.dark-mode .table {
+  --bs-table-color: var(--text);
+  --bs-table-bg: #303431;
+  --bs-table-border-color: var(--border);
+}
